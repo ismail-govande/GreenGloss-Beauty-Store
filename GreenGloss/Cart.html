@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenGloss - Cart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="logo" />
+      GreenGloss
+    </div>
+    <div>
+      <a href="products.html">← Continue Shopping</a>
+      <a href="Cart.html" class="cart-link">Cart (<span id="cartCount">0</span>)</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Your Cart 🛒</h2>
+
+    <div id="cartItems"></div>
+
+    <div id="summaryBox" style="display:none">
+      <div class="summary">
+        <h3>Order Summary</h3>
+        <p>Subtotal: <strong id="subtotal">$0.00</strong></p>
+        <p>Eco Discount (Score A items -5%): <strong id="ecoDiscount" style="color:green">-$0.00</strong></p>
+        <p>Promo Discount: <strong id="promoDiscount" style="color:green">-$0.00</strong></p>
+        <p>Shipping: <strong>FREE 🎉</strong></p>
+        <p>Loyalty Points Earned: <strong id="loyaltyPoints">0</strong></p>
+        <hr/>
+        <p>Total: <strong id="total" style="font-size:1.2rem">$0.00</strong></p>
+
+        <input type="text" id="promoInput" placeholder="Enter promo code..." />
+        <button onclick="applyPromo()">Apply</button>
+        <p id="promoMsg" style="font-size:0.85rem"></p>
+
+        <button class="btn-green" onclick="checkout()">Checkout →</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="popup" style="display:none" class="popup-overlay">
+    <div class="popup-box">
+      <h2>🎉 Order Placed!</h2>
+      <p>Thanks for shopping sustainably with GreenGloss!</p>
+      <button class="btn-green" onclick="clearAndClose()">Continue Shopping</button>
+    </div>
+  </div>
+
+  <script src="cart.js"></script>
+
+</body>
+</html>

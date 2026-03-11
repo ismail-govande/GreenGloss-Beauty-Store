@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenGloss - Sustainable Beauty</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="logo" />
+      GreenGloss
+    </div>
+    <div>
+      <a href="products.html">Shop</a>
+      <a href="Cart.html" class="cart-link">Cart (<span id="cartCount">0</span>)</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <h1>Beauty That Loves The Planet 🌿</h1>
+    <p>Every product is eco-rated. Shop clean, shop green.</p>
+  </div>
+
+  <div class="filter-bar">
+    <input type="text" id="searchBox" placeholder="Search by ingredient..." />
+    <button class="filter-btn active" data-score="all">All</button>
+    <button class="filter-btn" data-score="A">Eco A</button>
+    <button class="filter-btn" data-score="B">Eco B</button>
+    <button class="filter-btn" data-score="C">Eco C</button>
+  </div>
+
+  <div class="container">
+    <h2>Our Products</h2>
+    <div class="grid" id="productGrid"></div>
+    <p id="noResults" style="display:none; text-align:center; color:gray;">No products found.</p>
+  </div>
+
+  <footer>© 2026 GreenGloss. Made with 💚 for the planet.</footer>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
